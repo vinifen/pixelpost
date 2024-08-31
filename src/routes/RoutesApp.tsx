@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "../pages/home/Home"
 import Login from "../pages/Login"
-import Canvas from "../pages/Canvas"
+import Canvas from "../pages/canvas/Canvas"
 import Account from "../pages/Account"
 
 export default function RoutesApp() {
