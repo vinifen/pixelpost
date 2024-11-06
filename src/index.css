@@ -14,27 +14,18 @@
 }
 
 .react-colorful{
-  height: 160px !important;
-  width: 160px !important;
+  height: 140px !important;
+    width: 140px !important;
+}
+
+@media (max-width: 360px) {
+  .react-colorful {
+    height: 120px !important;
+    width: 120px !important;
+  }
 }
 
 body {
   margin: 0;
   overflow: hidden; /* Impede a rolagem da página */
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; /* Impede a rolagem do contêiner */
-  position: relative;
-  background-color: #f0f0f0;
-  cursor: grab; /* Define o cursor padrão */
-}
-
-.canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
 }
