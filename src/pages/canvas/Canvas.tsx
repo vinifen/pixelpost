@@ -148,11 +148,19 @@ const Canvas = () => {
   };
 
   const handleCanvasWidht = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCanvasWidth(Number(e.target.value)); 
+    let canvasWidhtValue = Number(e.target.value)
+    if(canvasWidhtValue >= 2560){
+      canvasWidhtValue = 2560;
+    }
+    setCanvasWidth(canvasWidhtValue); 
     Do();
   }
   const handleCanvasHeight = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCanvasHeight(Number(e.target.value));
+    let canvasHeightValue = Number(e.target.value)
+    if(canvasHeightValue >= 1440){
+      canvasHeightValue = 1440;
+    }
+    setCanvasHeight(canvasHeightValue);
     Do();
   }
 

@@ -1,6 +1,6 @@
 import axios from "axios";
-
-const phpGetImages = 'http://localhost/pixel_post-backend/account-images/getImages.php';
+import phpAddress from "./phpAddress";
+const phpGetImages = `${phpAddress}/account-images/getImages.php`;
 
 const GetImages = async (): Promise<string[]> => {
   try {

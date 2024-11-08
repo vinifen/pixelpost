@@ -1,9 +1,9 @@
 import axios from "axios"
-
+import phpAddress from "./phpAddress";
 
 const LogOut = async () => {
   
-  const phpLogOut = 'http://localhost/pixel_post-backend/account/logOut.php';
+  const phpLogOut = `${phpAddress}/account/logOut.php`;
   try {
     const response = await axios.post<{message: string}>(phpLogOut, {}, { withCredentials: true});
     console.log(response.data.message);

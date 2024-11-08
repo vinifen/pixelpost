@@ -1,5 +1,6 @@
 import { RefObject } from "react";
 import axios from "axios";
+import phpAddress from "../../components/phpAddress";
 
 export const DownloadCanvas = (canvasRef: RefObject<HTMLCanvasElement>) => {
   const canvas = canvasRef.current;
@@ -20,7 +21,7 @@ export const UploadCanvas = async (
   canvasRef: React.RefObject<HTMLCanvasElement>
 ): Promise<UploadResult> => {
   const canvas = canvasRef.current;
-  const phpPostImages = 'http://localhost/pixel_post-backend/account-images/postImages.php';
+  const phpPostImages = `${phpAddress}/account-images/postImages.php`;
 
   if (!canvas) {
     return { status: false, message: "Canvas error" };

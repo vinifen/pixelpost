@@ -11,7 +11,7 @@ const Dimensions: React.FC<DimensionsProps> = ({
     onChangeCanvasHeight, 
     valueCanvasWidth, 
     onChangeCanvasWidht,
-  }) => {
+}) => {
 return ( 
   <div className="bg-primary-button fixed top-16 right-20">
     <div className="bg-secundary-button px-2 mx-1 py-1 my-1 w-56">
@@ -27,6 +27,8 @@ return (
           <input className="text-slate-700 mr-2 font-semibold w-1/6 text-center"
             value={valueCanvasHeight}
             onChange={onChangeCanvasHeight}
+            min={10}
+            max={1440}
           >
             
           </input>
@@ -52,6 +54,8 @@ return (
         <input className="text-slate-700 mr-2 font-semibold w-1/6 text-center"
           value={valueCanvasWidth}
           onChange={onChangeCanvasWidht}
+          min={10}
+          max={2560}
         >
           
         </input>
@@ -62,7 +66,7 @@ return (
           type="range" 
           onChange={onChangeCanvasWidht} 
           min={10}
-          max={1440}
+          max={2560}
         />
       </div>
     </div>

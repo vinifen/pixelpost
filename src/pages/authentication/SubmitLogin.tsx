@@ -1,8 +1,9 @@
 import axios from "axios";
+import phpAddress from "../../components/phpAddress";
 
 const SubmitLogin = async (usernameLogin: string, passwordLogin: string, rememberLogin: boolean) => { 
 
-  const phpSubmitLogin = 'http://localhost/pixel_post-backend/authentication/login.php';
+  const phpSubmitLogin = `${phpAddress}/authentication/login.php`;
   try {
     const response = await axios.post<{ message: string, validator: boolean }>(
       phpSubmitLogin,

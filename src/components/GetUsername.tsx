@@ -1,6 +1,6 @@
 import axios from "axios";
-
-const phpGetUsername = 'http://localhost/pixel_post-backend/account/getUsername.php';
+import phpAddress from "./phpAddress";
+const phpGetUsername = `${phpAddress}/account/getUsername.php`;
 
 const GetUsername = async (): Promise<string> => {
   try {

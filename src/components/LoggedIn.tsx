@@ -1,7 +1,8 @@
 import axios from "axios";
+import phpAddress from "./phpAddress";
 
 const LoggedIn = async () => {
-  const phpLoggedIn = 'http://localhost/pixel_post-backend/authentication/loggedIn.php';
+  const phpLoggedIn = `${phpAddress}/authentication/loggedIn.php`;
   try{
     const response = await axios.post<{validator: boolean }>(
       phpLoggedIn, 

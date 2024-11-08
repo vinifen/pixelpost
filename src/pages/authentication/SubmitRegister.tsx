@@ -1,8 +1,8 @@
 import axios from "axios";
-
+import phpAddress from "../../components/phpAddress";
 const SubmitRegister = async (usernameRegister: string, passwordRegister: string) => {
   console.log(usernameRegister, passwordRegister);
-  const phpSubmitRegister = 'http://localhost/pixel_post-backend/authentication/postRegister.php';
+  const phpSubmitRegister = `${phpAddress}/authentication/postRegister.php`;
   try {
     const response = await axios.post<{ message: string, validator: boolean }>(
       phpSubmitRegister,
