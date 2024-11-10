@@ -1,6 +1,7 @@
 import axios from "axios";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import phpAddress from "../../components/phpAddress";
 
 interface DeleteAccountProps {
   status: boolean;
@@ -85,7 +86,7 @@ const DeleteAccount = () => {
 };
 
 const submitDeleteAccount = async (password: string) => {
-  const phpDeleteAccount = 'http://localhost/pixel_post-backend/account/deleteAccount.php';
+  const phpDeleteAccount = `${phpAddress}/account/deleteAccount.php`;
 
   try {
     const response = await axios.post<{ validator: boolean, message: string }>(phpDeleteAccount, {password}, { withCredentials: true });

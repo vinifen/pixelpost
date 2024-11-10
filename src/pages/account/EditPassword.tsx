@@ -1,6 +1,7 @@
 import axios from "axios";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import phpAddress from "../../components/phpAddress";
 
 interface EditPasswordProps {
   status: boolean;
@@ -94,7 +95,7 @@ const EditPassword = () => {
 };
 
 const submitEditPassword = async (newPassword: string, oldPassword: string) => {
-  const phpEditPassword = 'http://localhost/pixel_post-backend/account/editPassword.php';
+  const phpEditPassword = `${phpAddress}/account/editPassword.php`;
 
   try {
     const response = await axios.post<{ validator: boolean, message: string }>(phpEditPassword, {newPassword, oldPassword}, { withCredentials: true });

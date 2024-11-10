@@ -1,6 +1,7 @@
 import axios from "axios";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import phpAddress from "../../components/phpAddress";
 
 interface EditUsernameProps {
   status: boolean;
@@ -70,11 +71,10 @@ const EditUsername: React.FC<{ oldUsername: string }> = ({ oldUsername }) => {
 };
 
 const submitEditUsername = async (newUsername: string) => {
-  const phpEditUsername = 'http://localhost/pixel_post-backend/account/editUsername.php';
+  const phpEditUsername = `${phpAddress}/account/editUsername.php`;
 
   try {
     const response = await axios.post<{ validator: boolean, message: string }>(phpEditUsername, { newUsername}, { withCredentials: true });
-    console.log(response.data.validator, response.data.message, "resultado username");
     if(response.data.validator === true){
       return {status: true, message: response.data.message};
     }else{
