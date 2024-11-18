@@ -4,7 +4,7 @@ import Register from "./Register";
 import { Link } from "react-router-dom";
 
 export default function Authentication() {
-  const [isLogin, setIsLogin] = useState<boolean>(true); // Apenas um estado para controle
+  const [isLogin, setIsLogin] = useState<boolean>(true);
 
   const handleToggle = () => {
     setIsLogin(prev => !prev);

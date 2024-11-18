@@ -40,7 +40,6 @@ const Register: React.FC<onClickChangeAuth> = ({onClickChangeAuth}) => {
         
         if (resultSubmitRegister.status) {
           const resultSubmitLogin: AuthResult = await SubmitLogin(usernameRegister, passwordRegister, true);
-          console.log("alk;sdfhlasdkjfhlasdkjfhoalsdkujfhlasdkjfahlksdujfas" + resultSubmitLogin.status + resultSubmitLogin.message);
           if (resultSubmitLogin.status) {
             setTimeout(() => {
               navigate('/');
