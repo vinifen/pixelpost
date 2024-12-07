@@ -4,27 +4,47 @@ import GetImages from '../../components/GetImages';
 import LoggedIn from '../../components/LoggedIn';
 import ProfileMenu from './ProfileMenu';
 import GetUsername from '../../components/GetUsername';
+//import GetFirst100Images from '../../components/GetFirst100Images';
 
 export default function Home() {
   const [images, setImages] = useState<string[]>([]);
   const [isProfileMenuVisible, setProfileMenu] = useState<boolean>(false);
   const [isLogged, setLogged] = useState<boolean>(false);
   const [username, setUsername] = useState<string>();
+  //const [images100, setImages100] = useState<string[]>([]);
 
   useEffect(() => {  
     const handleGetUserData = async () => {
       if(await LoggedIn() == true){ 
         const fetchedImages = await GetImages();
         const fetchedUsername: string = await GetUsername();
+        //const fetched100Images = await GetFirst100Images();
         setLogged(true);
         setImages(fetchedImages);
         setUsername(fetchedUsername);
+        //setImages100(fetched100Images);
       }
     }; 
     handleGetUserData();
   },[]);
   
   return (
+    <>
+    {/* disabled the uploaded background images feature, to enable it, remove background from root index.html and enable GetFirst100Images() in components/
+    <div className='absolute -z-10 w-screen h-screen bg-dark-blue-gradient'>
+      <div className='grid grid-cols-10 grid-rows-10 w-full h-full'>
+        {images100.slice(0, 100).map((images100URL, index) => (
+          <img
+            key={index}
+            className='w-full h-full object-cover'
+            src={images100URL}
+            alt={`${images100URL}-${index}`}
+          />
+        ))}
+      </div>
+    </div>
+        */}
+
     <div className='min-h-screen grid grid-rows-[auto_1fr_auto]'>
       <header>
         <nav className='flex justify-between mt-5 mx-8 sm:mt-12 sm:mx-12'>
@@ -74,7 +94,7 @@ export default function Home() {
           {images.length > 0 && (
             <>
               {images.slice(0, 7).map((imageURL, index) => (
-                <img key={index} className='h-20 md:h-28 shadow-xl' src={imageURL} alt={`image${index}`} />
+                <img key={index} className='h-20 md:h-28 shadow-xl' src={imageURL} alt={`${imageURL}-${index}`} />
               ))}
               {images.length > 8 && (
                 <div className='h-20 w-auto md:h-28 shadow-xl border-4 border-primary-button flex justify-center items-center'>
@@ -94,5 +114,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+  </>
   );
 }

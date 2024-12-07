@@ -9,6 +9,7 @@ const LoggedIn = async () => {
       {}, 
       { withCredentials: true }
     );
+    console.log(response);
     if(response.data.validator && response.data){
       return true;
     }else{ 
