@@ -11,8 +11,8 @@ It was developed using React, PHP, Tailwind CSS, simple JWT-based authentication
 
 ## Screenshots:
 
-[Home](https://res.cloudinary.com/dp5iuxy1u/image/upload/v1740434680/print-2-pixelpost-home.png)
+![Home](https://res.cloudinary.com/dp5iuxy1u/image/upload/v1740434680/print-2-pixelpost-home.png)
 
-[Login](https://res.cloudinary.com/dp5iuxy1u/image/upload/v1740434680/print-1-pixelpost-login.png)
+![Login](https://res.cloudinary.com/dp5iuxy1u/image/upload/v1740434680/print-1-pixelpost-login.png)
 
-[Canvas](https://res.cloudinary.com/dp5iuxy1u/image/upload/v1740434680/print-3-pixelpost-canvas.png)
+![Canvas](https://res.cloudinary.com/dp5iuxy1u/image/upload/v1740434680/print-3-pixelpost-canvas.png)
