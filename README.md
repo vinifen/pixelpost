@@ -1,9 +1,59 @@
 # Pixelpost
-#### v-2.0
+#### v-alpha-2.0
 
 Pixelpost is a digital art platform that allows users to either download their creations or save them to their account. 
 
 It was developed using React, PHP, Tailwind CSS, simple JWT-based authentication, and MySQL, with the goal of advancing my web development skills.
+
+## Local Installation:
+
+### Backend:
+
+First, start the backend:
+
+``bash
+cd backend
+``
+
+#### Create the database:
+
+CCopy the contents of `db/pixelpost-db-mysql.sql` into your MySQL database.
+
+#### Create the `.env` file:
+
+Create an environment variables file following the structure of `.env.example`, using the same MySQL username and password.
+
+#### Install dependencies:
+
+``bash
+composer install
+``
+
+#### Start the server:
+
+``bash
+php -S localhost:7000
+``
+
+### Frontend: 
+
+Now, initialize the frontend:
+
+``bash
+cd frontend
+``
+
+#### Install dependencies:
+
+``bash
+npm install
+``
+
+### Start the application:
+
+``bash
+npm run dev
+``
 
 ## Prototyping: 
 
