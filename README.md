@@ -17,7 +17,7 @@ cd backend
 
 #### Create the database:
 
-CCopy the contents of `db/pixelpost-db-mysql.sql` into your MySQL database.
+Copy the contents of `db/pixelpost-db-mysql.sql` into your MySQL database.
 
 #### Create the `.env` file:
 
